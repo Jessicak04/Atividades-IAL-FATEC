@@ -1,0 +1,75 @@
+1) Quadro Resumo
+O quadro resumo é uma tabela ou uma lista que apresenta 
+de forma concisa as informações mais relevantes sobre o 
+problema que você está resolvendo. 
+
+Geralmente inclui:
+Variáveis: o que elas representam e seus tipos.
+Constantes: valores fixos usados no cálculo.
+Entrada: dados que o usuário deve fornecer.
+Saída: dados que o programa exibirá.
+
+2) Diagrama de Blocos
+O diagrama de blocos é uma representação visual do 
+algoritmo. Ele usa formas geométricas para ilustrar as 
+etapas do processo:
+
+Retângulos: representam ações ou processos (como cálculos).
+Losangos: representam decisões (como condições).
+Setas: mostram a direção do fluxo de execução.
+
+3) Algoritmo Descritivo
+O algoritmo descritivo é uma descrição passo a passo do 
+que o programa fará. Pode ser escrito em linguagem 
+natural ou em pseudocódigo. Inclui:
+
+Passos iniciais (como solicitar a entrada do usuário).
+Cálculos necessários.
+Saídas que devem ser apresentadas.
+
+4) Código Fonte
+O código fonte é a implementação do algoritmo em uma 
+linguagem de programação, como Python. É o código que 
+você escreverá para realizar as operações descritas no 
+algoritmo.
+
+Exemplo de Estrutura
+Aqui está um exemplo de como você pode organizar cada 
+um desses elementos:
+
+#Quadro Resumo
+
+Variáveis: raio (float), area (float)
+Constantes: PI = 3.14
+Entrada: raio (digitado pelo usuário)
+Saída: area (calculada e exibida)
+
+#Diagrama de Blocos
+
+Início
+Ler raio
+Calcular area = PI * raio * raio
+Exibir area
+Fim
+
+Algoritmo Descritivo
+
+Iniciar
+Solicitar ao usuário que insira o valor do raio.
+Ler o valor do raio.
+Calcular a área usando a fórmula area = PI * raio * raio.
+Exibir o valor da área.
+Finalizar.
+
+#Código Fonte (Python)
+
+python
+#Copiar código
+PI = 3.14
+raio = float(input("Digite o valor do raio: "))
+area = PI * raio * raio
+print("A área do círculo é:", area)
+
+Com isso, você terá uma visão completa do problema e da 
+solução proposta! Se precisar de mais detalhes em algum 
+desses pontos, é só avisar.
