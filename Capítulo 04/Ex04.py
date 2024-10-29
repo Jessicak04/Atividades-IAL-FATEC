@@ -3,4 +3,4 @@
 
 nome_completo = input("Digite seu nome completo: ")
 nome_completo_dividido = nome_completo.split(" ")
-print(nome_completo_dividido[1])
+print(nome_completo_dividido[1],nome_completo_dividido[2])

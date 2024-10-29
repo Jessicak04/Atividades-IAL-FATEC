@@ -2,7 +2,7 @@
 # apenas os números maiores do que 10. Utilize a função filter para fazer isso.
 
 numeros = []
-for indice in range(1,5):
+for indice in range(0,5):
     numero = int(input("Digite um número: "))
     numeros.append(numero)
 

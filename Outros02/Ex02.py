@@ -4,20 +4,16 @@
 # o programa. Se for sim começar novamente pedindo nome e fazendo novos cálculos.
 
 while True:
-    # Entrada de dados
     nome = input("Digite o nome do funcionário: ")
     salario = float(input("Digite o salário do funcionário: "))
 
-    # Cálculo do novo salário
     reajuste = 0.08  # 8%
     novo_salario = salario * (1 + reajuste)
 
-    # Impressão dos resultados
     print(f"\nNome: {nome}")
     print(f"Salário atual: R$ {salario:.2f}")
     print(f"Novo salário com reajuste: R$ {novo_salario:.2f}\n")
 
-    # Pergunta se deseja fazer novos cálculos
     resposta = input("Deseja fazer novos cálculos? (sim/não): ").strip().lower()
     if resposta != 'sim':
         print("Programa encerrado.")

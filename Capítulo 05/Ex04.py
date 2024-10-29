@@ -9,6 +9,7 @@ nomes.append(input("Digite o terceiro nome: "))
 nomes.append(input("Digite o quarto nome: "))
 nomes.append(input("Digite o quinto nome: "))
 
-posicao_para_excluir = int( input("Escolha uma posição de 0(zero) até quatro para excluir da lista: "))
+posicao_para_excluir = int( input(
+    "Escolha uma posição de 0(zero) até quatro para excluir da lista: "))
 del nomes[posicao_para_excluir]
 print(nomes)

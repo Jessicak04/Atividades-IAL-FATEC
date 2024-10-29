@@ -5,6 +5,9 @@
 #}
 
 produto = {
-    "descrição": "Água",
-    "preço": 2.00
+    "descricao": "Água",
+    "preco": 2.00
 }
+
+print("Descrição do Produto:", produto["descricao"])
+print("Preço do Produto: R$", produto['preco'])

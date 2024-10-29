@@ -7,7 +7,7 @@ def escrever_array(array):
         print(valor)
 
 numeros = []
-for indice in range(1,10):
+for indice in range(0,10):
     numero = int(input("Digite um número: "))
     numeros.append(numero)
 

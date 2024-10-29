@@ -6,7 +6,6 @@
 # Janeiro, torcedores de outros clubes; • o número de pessoas de Niterói torcedoras 
 # do Fluminense
 
-# Inicializa contadores e acumuladores
 torcedores = {
     "Fluminense": 0,
     "Botafogo": 0,
@@ -15,75 +14,46 @@ torcedores = {
     "Outros": 0
 }
 
-soma_salario_botafogo = 0
-contador_botafogo = 0
-moradores_rj_outros = 0
-moradores_niteroi_fluminense = 0
+salarial_botafogo = []  
+moradores_rj_outras = 0  
+moradores_niteroi_fluminense = 0  
 
-# Loop para coletar as respostas
-while True:
-    # Pergunta sobre o time de coração
-    print("Qual o seu time de coração?")
-    print("1 - Fluminense")
-    print("2 - Botafogo")
-    print("3 - Vasco")
-    print("4 - Flamengo")
-    print("5 - Outros")
-    time = int(input("Digite o número correspondente: "))
-    
-    if time < 1 or time > 5:
-        print("Opção inválida! Tente novamente.")
-        continue
-    
-    # Contabiliza o time de coração
+num_pessoas = int(input("Quantas pessoas participaram da pesquisa? "))
+
+for _ in range(num_pessoas):
+    time = int(input("\nQual o seu time de coração? (1-Fluminense; 2-Botafogo;3-Vasco; 4-Flamengo; 5-Outros): "))
+    local = int(input("Onde você mora? (1-RJ; 2-Niterói; 3-Outros): "))
+    salario = float(input("Qual o seu salário? "))
+
+    # Contagem de torcedores por clube
     if time == 1:
         torcedores["Fluminense"] += 1
+        if local == 2:  # Morador de Niterói
+            moradores_niteroi_fluminense += 1
     elif time == 2:
         torcedores["Botafogo"] += 1
-        # Pergunta o salário se for do Botafogo
-        salario = float(input("Qual o seu salário? R$ "))
-        soma_salario_botafogo += salario
-        contador_botafogo += 1
+        salarial_botafogo.append(salario)
     elif time == 3:
         torcedores["Vasco"] += 1
     elif time == 4:
         torcedores["Flamengo"] += 1
     elif time == 5:
         torcedores["Outros"] += 1
-    
-    # Pergunta sobre a localização
-    print("Onde você mora?")
-    print("1 - RJ")
-    print("2 - Niterói")
-    print("3 - Outros")
-    local = int(input("Digite o número correspondente: "))
-    
-    if local < 1 or local > 3:
-        print("Opção inválida! Tente novamente.")
-        continue
-    
-    # Contabiliza a localização
-    if local == 1 and time == 5:
-        moradores_rj_outros += 1
-    elif local == 2 and time == 1:
-        moradores_niteroi_fluminense += 1
+        if local == 1:  # Morador do RJ
+            moradores_rj_outras += 1
 
-    # Pergunta se deseja continuar
-    continuar = input("Deseja continuar a pesquisa? (sim/não): ").strip().lower()
-    if continuar != 'sim':
-        break
+if local == 1 and time == 5:
+    moradores_rj_outras += 1
 
-# Resultados
-print("\nResultados da pesquisa:")
-print(f"Número de torcedores por clube:")
-for time, quantidade in torcedores.items():
-    print(f"{time}: {quantidade}")
+print("\nNúmero de torcedores por clube:")
+for time, count in torcedores.items():
+    print(f"{time}: {count} torcedor(es)")
 
-if contador_botafogo > 0:
-    media_salarial_botafogo = soma_salario_botafogo / contador_botafogo
+if salarial_botafogo:
+    media_salarial_botafogo = sum(salarial_botafogo) / len(salarial_botafogo)
     print(f"\nMédia salarial dos torcedores do Botafogo: R$ {media_salarial_botafogo:.2f}")
 else:
-    print("\nNão foram registrados torcedores do Botafogo.")
+    print("\nNão há torcedores do Botafogo para calcular a média salarial.")
 
-print(f"Número de pessoas moradoras do Rio de Janeiro, torcedores de outros clubes: {moradores_rj_outros}")
-print(f"Número de pessoas de Niterói torcedoras do Fluminense: {moradores_niteroi_fluminense}")
+print(f"Número de moradores do Rio de Janeiro torcedores de 'Outros': {moradores_rj_outras}")
+print(f"Número de moradores de Niterói torcedores do Fluminense: {moradores_niteroi_fluminense}")

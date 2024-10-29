@@ -13,7 +13,6 @@ def obter_maior(numero, numero2, numero3):
         maior = numero3
     return maior
 
-
 def dobrar(numero):
     return numero * 2
 
